@@ -16,6 +16,7 @@ public class HomePage {
     public static final By FIRST_IN_DROPDOWN = By.cssSelector("div.a40619bfbe");
     public static final By DATA_FIELD = By.cssSelector("div.ed2ff9f661");
     public static final String DATA = "span[data-date='%s']";
+    public static final By ATTRACTIONS_BUTTON = By.id("attractions");
 
     public HomePage openHomePage(){
         Selenide.open(cfg.baseUrl());
@@ -34,6 +35,11 @@ public class HomePage {
         $(String.format(DATA,startData)).click();
         $(String.format(DATA,endData)).click();
         $(SUBMIT_BUTTON).click();
+        return this;
+    }
+
+    public HomePage clickAttractionsButton(){
+        $(ATTRACTIONS_BUTTON).click();
         return this;
     }
 }

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Initial commit">
+    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages_2/AttractionsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages_2/FirstAttractionPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages_2/SearchAttractions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HotelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SearchCity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchCity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.SelenideTests.testScenario_1">
+  <component name="RunManager" selected="JUnit.SelenideTests.testScenario_2">
     <configuration name="SelenideTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework23" />
       <extension name="coverage">
@@ -94,8 +93,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SelenideTests.testScenario_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework23" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SelenideTests" />
+      <option name="METHOD_NAME" value="testScenario_2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestScenario_2.testScenario_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework23" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestScenario_2" />
+      <option name="METHOD_NAME" value="testScenario_2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SelenideTests.testScenario_2" />
+        <item itemvalue="JUnit.TestScenario_2.testScenario_2" />
         <item itemvalue="JUnit.SelenideTests.testScenario_1" />
         <item itemvalue="JUnit.SelenideTests" />
       </list>
@@ -116,7 +149,8 @@
       <workItem from="1680536064390" duration="37397000" />
       <workItem from="1680598103063" duration="2139000" />
       <workItem from="1680600451666" duration="1959000" />
-      <workItem from="1680634928260" duration="18965000" />
+      <workItem from="1680634928260" duration="19539000" />
+      <workItem from="1680681021364" duration="15399000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1680601566571</created>
@@ -125,7 +159,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680601566571</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Исправила бак с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения.">
+      <created>1680654155743</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680654155743</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Исправила бак с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения.">
+      <created>1680654311082</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680654311082</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения.">
+      <created>1680654335075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680654335075</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +189,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Исправила бак с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения." />
+    <MESSAGE value="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения." />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения." />
   </component>
 </project>
