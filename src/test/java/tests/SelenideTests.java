@@ -100,10 +100,8 @@ public class SelenideTests {
         String priseAttraction = firstAttractionPage.getPrice();
 
         assertAll(
-                () -> assertEquals(nameFirstAttraction, nameAttraction),
-                //названия через раз не совпадают
-                () -> assertEquals(priseFirstAttraction, priseAttraction)
-                //цены на страницах не совпадают
+                () -> assertEquals("Названия не совпадают", nameFirstAttraction, nameAttraction),
+                () -> assertEquals("Цены на страницах не совпадают", priseFirstAttraction, priseAttraction)
         );
     }
 }
