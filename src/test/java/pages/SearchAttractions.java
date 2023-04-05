@@ -1,4 +1,4 @@
-package pages_2;
+package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;

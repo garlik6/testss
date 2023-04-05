@@ -6,9 +6,9 @@ import pages.HomePage;
 import pages.HotelPage;
 import pages.MapPage;
 import pages.SearchCity;
-import pages_2.AttractionsPage;
-import pages_2.FirstAttractionPage;
-import pages_2.SearchAttractions;
+import pages.AttractionsPage;
+import pages.FirstAttractionPage;
+import pages.SearchAttractions;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
@@ -100,10 +100,8 @@ public class SelenideTests {
         String priseAttraction = firstAttractionPage.getPrice();
 
         assertAll(
-                () -> assertEquals(nameFirstAttraction, nameAttraction),
-                //названия через раз не совпадают
-                () -> assertEquals(priseFirstAttraction, priseAttraction)
-                //цены на страницах не совпадают
+                () -> assertEquals("Названия не совпадают", nameFirstAttraction, nameAttraction),
+                () -> assertEquals("Цены на страницах не совпадают", priseFirstAttraction, priseAttraction)
         );
     }
 }

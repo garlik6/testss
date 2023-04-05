@@ -16,43 +16,49 @@ public class MapPage {
     public static final By NAME_HOTEL_2 = By.xpath("//div[@data-testid='header-container']");
     public static final By FIELD_WITH_STARS = By.cssSelector("span.bui-rating.bui-rating--smaller");
     public static final By FIELD_WITH_SQUARES = By.xpath("//span[@data-testid='rating-squares']");
-
-    public static final By AVERAGE_RATING = By.cssSelector("div.bui-review-score__badge");
+    public static final By AVERAGE_RATING_1 = By.cssSelector("div.bui-review-score__badge");
+    public static final By AVERAGE_RATING_2 = By.xpath("//div[@class='c3deae0c07']//div//div");
     public static final By NUMBER_OF_REVIEWS = By.cssSelector("div.bui-review-score__text");
     public static final By COST = By.cssSelector("span.prco-valign-middle-helper");
     public static final By MOVING_MARKER = By.cssSelector(".atlas-marker.hotel.bounce");
 
-
     public MapPage findFirstHotel() throws InterruptedException {
-        if ($(FIRST_HOTEL_1).isDisplayed()) {
+        Thread.sleep(5000);
+        if ($(FIRST_HOTEL_1).exists()) {
             $(FIRST_HOTEL_1).shouldBe(Condition.visible).hover();
         } else {
             $(FIRST_HOTEL_2).shouldBe(Condition.visible).hover();
         }
-        Thread.sleep(5000);
         return this;
     }
 
-    public String getNameOfHotel() {
-        if ($(NAME_HOTEL_2).exists()) {
-            return $(NAME_HOTEL_2).innerText();
-        } else {
+    public String getNameOfHotel() throws InterruptedException {
+        Thread.sleep(10000);
+        if ($(NAME_HOTEL_1).exists()) {
             return $(NAME_HOTEL_1).innerText();
+        } else {
+            return $(NAME_HOTEL_2).innerText();
         }
     }
 
-    public Long getNumberOfStar() {
-        if($(FIELD_WITH_STARS).exists()){
+    public Long getNumberOfStar() throws InterruptedException {
+        Thread.sleep(5000);
+        if ($(FIELD_WITH_STARS).exists()) {
             String parentElement = $$(FIELD_WITH_STARS).get(0).getAttribute("aria-label");
             assert parentElement != null;
             return Long.parseLong(parentElement.split(" ")[0]);
-        }else{
+        } else {
             return executeJavaScript("return $(arguments[0]).children().length", $(FIELD_WITH_SQUARES));
         }
     }
 
-    public String getAverageRating() {
-        return $(AVERAGE_RATING).innerText();
+    public String getAverageRating() throws InterruptedException {
+        Thread.sleep(5000);
+        if ($(AVERAGE_RATING_1).exists())
+            return $(AVERAGE_RATING_1).innerText();
+        else {
+            return $(AVERAGE_RATING_2).innerText();
+        }
     }
 
     public String getNumberOfReviews() {

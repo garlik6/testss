@@ -1,4 +1,4 @@
-package pages_2;
+package pages;
 
 import org.openqa.selenium.By;
 

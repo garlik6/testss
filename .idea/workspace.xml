@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages_2/AttractionsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages_2/FirstAttractionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages_2/SearchAttractions.java" afterDir="false" />
+    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Changed Test Case 2 covering the process of choosing an attraction on booking.com.&#10;Added messages to assert.&#10;Added Thread.sleep() in MapPage to give the map time to load.&#10;Deleted BaseTest.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages_2/AttractionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AttractionsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages_2/FirstAttractionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FirstAttractionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages_2/SearchAttractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchAttractions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,6 +38,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2Nq0vODMYC81yd13qoPtKNP1oS7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -61,7 +66,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.SelenideTests.testScenario_2">
+  <component name="RunManager" selected="JUnit.SelenideTests.testScenario_1">
     <configuration name="SelenideTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework23" />
       <extension name="coverage">
@@ -127,9 +132,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SelenideTests.testScenario_1" />
         <item itemvalue="JUnit.SelenideTests.testScenario_2" />
         <item itemvalue="JUnit.TestScenario_2.testScenario_2" />
-        <item itemvalue="JUnit.SelenideTests.testScenario_1" />
         <item itemvalue="JUnit.SelenideTests" />
       </list>
     </recent_temporary>
@@ -150,7 +155,12 @@
       <workItem from="1680598103063" duration="2139000" />
       <workItem from="1680600451666" duration="1959000" />
       <workItem from="1680634928260" duration="19539000" />
-      <workItem from="1680681021364" duration="15399000" />
+      <workItem from="1680681021364" duration="15787000" />
+      <workItem from="1680714189672" duration="6877000" />
+      <workItem from="1680727179424" duration="2914000" />
+      <workItem from="1681111273981" duration="110000" />
+      <workItem from="1681846937470" duration="1355000" />
+      <workItem from="1681912164294" duration="2399000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1680601566571</created>
@@ -180,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680654335075</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Test Case 2 and package pages_2.">
+      <created>1680699854264</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680699854264</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changed Test Case 2 covering the process of choosing an attraction on booking.com.&#10;Added messages to assert.&#10;Added Thread.sleep() in MapPage to give the map time to load.&#10;Deleted BaseTest.">
+      <created>1680729866823</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680729866823</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +215,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Исправила бак с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения." />
     <MESSAGE value="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения." />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправила баг с кнопкой &quot;Показать на карте&quot;, изменив локатор кнопки.&#10;Добавила поддержку разных селекторов для одного и того же элемента.&#10;Добавила getNumberOfStar() с использованием JavaScript, т.к. элементы сокрыты.&#10;Добавила сравнения." />
+    <MESSAGE value="Added Test Case 2 and package pages_2." />
+    <MESSAGE value="Changed Test Case 2 covering the process of choosing an attraction on booking.com.&#10;Added messages to assert.&#10;Added Thread.sleep() in MapPage to give the map time to load.&#10;Deleted BaseTest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Test Case 2 covering the process of choosing an attraction on booking.com.&#10;Added messages to assert.&#10;Added Thread.sleep() in MapPage to give the map time to load.&#10;Deleted BaseTest." />
   </component>
 </project>
