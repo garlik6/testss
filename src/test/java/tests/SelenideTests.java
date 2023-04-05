@@ -7,7 +7,7 @@ import pages.HotelPage;
 import pages.MapPage;
 import pages.SearchCity;
 
-//import static random.RandomForeignCity.generateRandomForeignCity;
+import static org.junit.Assert.assertEquals;
 
 public class SelenideTests {
     HomePage homePage = new HomePage();
@@ -17,6 +17,7 @@ public class SelenideTests {
     private String city = "Канкун";
     private String startData = "2023-04-29";
     private String endData = "2023-05-02";
+
     @Test
     @DisplayName("Тест-кейс 1")
     public void testScenario_1() throws InterruptedException {
@@ -35,37 +36,30 @@ public class SelenideTests {
 
         homePage.openHomePage()
                 .acceptCookie()
-                .searchCityAndData(city,startData,endData);
+                .searchCityAndData(city, startData, endData);
+
         searchCity.checkCityHeader(city)
                   .clickMapButton();
-        mapPage.findFirstHotel()
-                .getNameOfHotel();
 
         String name = mapPage.getNameOfHotel().trim();
-        String starsAndRating = mapPage.getNumberOfStar()
-                                       .getAverageRating().trim();
+        Long numberOfStars = mapPage.getNumberOfStar();
+        String rating = mapPage.getAverageRating().trim();
         String reviews = mapPage.getNumberOfReviews().trim();
         String cost = mapPage.getCost().trim();
-        System.out.println(name);
-        System.out.println(starsAndRating);
-        System.out.println(reviews);
-        System.out.println(cost);
 
+        mapPage.findFirstHotel();
         mapPage.clickMovingMarker();
 
         String newName = hotelPage.getHotelName().trim();
+        Long newNumberOfStars = hotelPage.getStars();
         String newRating = hotelPage.getAverageRating();
         String newReview = hotelPage.getNumberOfReviews().trim();
         String newCost = hotelPage.getCost().trim();
-        System.out.println(newName);
-        System.out.println(newRating);
-        System.out.println(newReview);
-        System.out.println(newCost);
 
-
-
+        assertEquals(name, newName);
+        assertEquals(numberOfStars, newNumberOfStars);
+        assertEquals(rating, newRating);
+        assertEquals(reviews, newReview);
+        assertEquals(cost, newCost);
     }
-
-
-
 }
