@@ -17,7 +17,6 @@ public class HomePage {
     public static final By DATA_FIELD = By.cssSelector("div.ed2ff9f661");
     public static final String DATA = "span[data-date='%s']";
 
-
     public HomePage openHomePage(){
         Selenide.open(cfg.baseUrl());
         return this;
@@ -27,6 +26,7 @@ public class HomePage {
         $(ACCEPT_COOKIE_BUTTON).click();
         return this;
     }
+
     public HomePage searchCityAndData(String city, String startData, String endData){
         $(SEARCH_FIELD).sendKeys(city);
         $(FIRST_IN_DROPDOWN).shouldHave(Condition.text(city));

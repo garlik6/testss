@@ -14,6 +14,4 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
         WebDriverRunner.setWebDriver(new ChromeDriver(options));
     }
-
 }
-
