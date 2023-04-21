@@ -10,6 +10,9 @@ import pages.AttractionsPage;
 import pages.FirstAttractionPage;
 import pages.SearchAttractions;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
@@ -21,9 +24,12 @@ public class SelenideTests {
     AttractionsPage rentCarPage = new AttractionsPage();
     SearchAttractions searchAttractions = new SearchAttractions();
     FirstAttractionPage firstAttractionPage = new FirstAttractionPage();
+
+    LocalDate date = LocalDate.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    String startData = formatter.format(date);
+    String endData = formatter.format(date.plusDays(2));
     private String city = "Лондон";
-    private String startData = "2023-04-29";
-    private String endData = "2023-05-02";
 
     @Test
     @DisplayName("Тест-кейс 1")
