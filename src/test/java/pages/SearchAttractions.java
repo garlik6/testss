@@ -27,7 +27,7 @@ public class SearchAttractions {
         return $(PRICE_FIRST_ATTRACTION).innerText();
     }
 
-    public SearchAttractions clickFirstAtracction() throws InterruptedException {
+    public SearchAttractions clickFirstAttraction() throws InterruptedException {
         $(FIRST_ATTRACTION_FIELD).click();
         Selenide.switchTo().window(1);
         Thread.sleep(5000);

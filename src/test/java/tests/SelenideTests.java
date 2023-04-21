@@ -52,22 +52,22 @@ public class SelenideTests {
                 .searchCityAndData(city, startData, endData);
 
         searchCity.checkCityHeader(city)
-                .clickMapButton();
+                  .clickMapButton();
 
-        String name = mapPage.getNameOfHotel().trim();
+        String name = mapPage.getNameOfHotel();
         Long numberOfStars = mapPage.getNumberOfStar();
-        String rating = mapPage.getAverageRating().trim();
-        String reviews = mapPage.getNumberOfReviews().trim();
-        String cost = mapPage.getCost().trim();
+        String rating = mapPage.getAverageRating();
+        String reviews = mapPage.getNumberOfReviews();
+        String cost = mapPage.getCost();
 
         mapPage.findFirstHotel();
         mapPage.clickMovingMarker();
 
-        String newName = hotelPage.getHotelName().trim();
+        String newName = hotelPage.getHotelName();
         Long newNumberOfStars = hotelPage.getStars();
         String newRating = hotelPage.getAverageRating();
-        String newReview = hotelPage.getNumberOfReviews().trim();
-        String newCost = hotelPage.getCost().trim();
+        String newReview = hotelPage.getNumberOfReviews();
+        String newCost = hotelPage.getCost();
 
         assertEquals(name, newName);
         assertEquals(numberOfStars, newNumberOfStars);
@@ -100,7 +100,7 @@ public class SelenideTests {
         String nameFirstAttraction = searchAttractions.getNameFirstAttraction();
         String priseFirstAttraction = searchAttractions.getPriceFirstAttraction();
 
-        searchAttractions.clickFirstAtracction();
+        searchAttractions.clickFirstAttraction();
 
         String nameAttraction = firstAttractionPage.getName();
         String priseAttraction = firstAttractionPage.getPrice();

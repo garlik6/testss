@@ -35,10 +35,10 @@ public class HotelPage {
     }
 
     public String getNumberOfReviews() {
-        return $(NUMBER_OF_REVIEWS).innerText();
+        return $(NUMBER_OF_REVIEWS).innerText().trim();
     }
 
     public String getCost() {
-        return $(COST).innerText();
+        return $(COST).innerText().trim();
     }
 }

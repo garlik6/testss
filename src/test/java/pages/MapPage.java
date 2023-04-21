@@ -35,9 +35,9 @@ public class MapPage {
     public String getNameOfHotel() throws InterruptedException {
         Thread.sleep(10000);
         if ($(NAME_HOTEL_1).exists()) {
-            return $(NAME_HOTEL_1).innerText();
+            return $(NAME_HOTEL_1).innerText().trim();
         } else {
-            return $(NAME_HOTEL_2).innerText();
+            return $(NAME_HOTEL_2).innerText().trim();
         }
     }
 
@@ -55,18 +55,18 @@ public class MapPage {
     public String getAverageRating() throws InterruptedException {
         Thread.sleep(5000);
         if ($(AVERAGE_RATING_1).exists())
-            return $(AVERAGE_RATING_1).innerText();
+            return $(AVERAGE_RATING_1).innerText().trim();
         else {
-            return $(AVERAGE_RATING_2).innerText();
+            return $(AVERAGE_RATING_2).innerText().trim();
         }
     }
 
     public String getNumberOfReviews() {
-        return $(NUMBER_OF_REVIEWS).innerText();
+        return $(NUMBER_OF_REVIEWS).innerText().trim();
     }
 
     public String getCost() {
-        return $(COST).innerText();
+        return $(COST).innerText().trim();
     }
 
     public MapPage clickMovingMarker() {
