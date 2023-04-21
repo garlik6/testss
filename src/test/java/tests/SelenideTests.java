@@ -2,19 +2,13 @@ package tests;
 
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
-import pages.HomePage;
-import pages.HotelPage;
-import pages.MapPage;
-import pages.SearchCity;
-import pages.AttractionsPage;
-import pages.FirstAttractionPage;
-import pages.SearchAttractions;
+import pages.*;
+import steps.AttractionAssertions;
+import steps.HotelAssertions;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertAll;
+import java.util.Map;
 
 public class SelenideTests {
     HomePage homePage = new HomePage();
@@ -30,6 +24,7 @@ public class SelenideTests {
     String startData = formatter.format(date);
     String endData = formatter.format(date.plusDays(2));
     private String city = "Лондон";
+
 
     @Test
     @DisplayName("Тест-кейс 1")
@@ -52,28 +47,19 @@ public class SelenideTests {
                 .searchCityAndData(city, startData, endData);
 
         searchCity.checkCityHeader(city)
-                  .clickMapButton();
+                .clickMapButton();
 
-        String name = mapPage.getNameOfHotel();
-        Long numberOfStars = mapPage.getNumberOfStar();
-        String rating = mapPage.getAverageRating();
-        String reviews = mapPage.getNumberOfReviews();
-        String cost = mapPage.getCost();
+        Map<String, String> hotelParamsFromMapPage = mapPage.getParameterMap();
+//        hotelParamsFromMapPage.put("name", "Test");
+//        hotelParamsFromMapPage.put("cost","Test");
 
         mapPage.findFirstHotel();
         mapPage.clickMovingMarker();
 
-        String newName = hotelPage.getHotelName();
-        Long newNumberOfStars = hotelPage.getStars();
-        String newRating = hotelPage.getAverageRating();
-        String newReview = hotelPage.getNumberOfReviews();
-        String newCost = hotelPage.getCost();
+        Map<String, String> hotelParamsFromHotelPage = hotelPage.getParameterMap();
 
-        assertEquals(name, newName);
-        assertEquals(numberOfStars, newNumberOfStars);
-        assertEquals(rating, newRating);
-        assertEquals(reviews, newReview);
-        assertEquals(cost, newCost);
+        HotelAssertions.assertHotelEquals(hotelParamsFromMapPage, hotelParamsFromHotelPage);
+
     }
 
     @Test
@@ -97,17 +83,12 @@ public class SelenideTests {
         rentCarPage.searchCityAndData(city, startData, endData);
         searchAttractions.clickLowPrice();
 
-        String nameFirstAttraction = searchAttractions.getNameFirstAttraction();
-        String priseFirstAttraction = searchAttractions.getPriceFirstAttraction();
+        Map<String, String> attractionParamsFromSearchAttractions = searchAttractions.getAttractionParams();
 
         searchAttractions.clickFirstAttraction();
 
-        String nameAttraction = firstAttractionPage.getName();
-        String priseAttraction = firstAttractionPage.getPrice();
+        Map<String, String> attractionParamsFromFirstAttractionPage = firstAttractionPage.getAttractionParams();
 
-        assertAll(
-                () -> assertEquals("Названия не совпадают", nameFirstAttraction, nameAttraction),
-                () -> assertEquals("Цены на страницах не совпадают", priseFirstAttraction, priseAttraction)
-        );
+        AttractionAssertions.assertAttractionEquals(attractionParamsFromSearchAttractions, attractionParamsFromFirstAttractionPage);
     }
 }

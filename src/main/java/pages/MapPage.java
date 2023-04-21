@@ -3,10 +3,13 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
+import steps.PageWithHotelParameters;
+
+import java.util.Objects;
 
 import static com.codeborne.selenide.Selenide.*;
 
-public class MapPage {
+public class MapPage implements PageWithHotelParameters {
     public static final By FIRST_HOTEL_1 = By.cssSelector(".map-card__content-container");
     public static final By FIRST_HOTEL_2 = By.xpath("//span[@data-testid='header-title']");
 
@@ -41,14 +44,16 @@ public class MapPage {
         }
     }
 
-    public Long getNumberOfStar() throws InterruptedException {
+    public String getNumberOfStars() throws InterruptedException {
         Thread.sleep(5000);
         if ($(FIELD_WITH_STARS).exists()) {
             String parentElement = $$(FIELD_WITH_STARS).get(0).getAttribute("aria-label");
             assert parentElement != null;
-            return Long.parseLong(parentElement.split(" ")[0]);
+            return parentElement.split(" ")[0];
         } else {
-            return executeJavaScript("return $(arguments[0]).children().length", $(FIELD_WITH_SQUARES));
+            return Objects
+                    .requireNonNull(executeJavaScript("return $(arguments[0]).children().length", $(FIELD_WITH_SQUARES)))
+                    .toString();
         }
     }
 

@@ -3,10 +3,11 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
+import steps.PageWithAttractionParameters;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SearchAttractions {
+public class SearchAttractions implements PageWithAttractionParameters {
 
     public static final By LOW_PRICE_BUTTON = By.xpath("//label[text()='Самая низкая цена']");
     public static final By NAME_FIRST_ATTRACTION = By.xpath("//h4");
@@ -19,11 +20,11 @@ public class SearchAttractions {
         return this;
     }
 
-    public String getNameFirstAttraction() {
+    public String getNameOfAttraction() {
         return $(NAME_FIRST_ATTRACTION).innerText();
     }
 
-    public String getPriceFirstAttraction() {
+    public String getPriceOfAttraction() {
         return $(PRICE_FIRST_ATTRACTION).innerText();
     }
 
