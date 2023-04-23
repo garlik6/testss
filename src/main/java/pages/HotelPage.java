@@ -8,8 +8,6 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class HotelPage implements PageWithHotelParameters {
 
-    // 1.9 на открывшейся странице отеля проверить название отеля,
-    // количество звезд, среднюю оценку, количество отзывов и стоимость
     public static final By HOTEL_NAME = By.xpath("//h2");
     public static final By STAR = By.cssSelector("[data-testid='rating-stars']");
     public static final By SQUARE = By.cssSelector("[data-testid='rating-squares']");

@@ -13,8 +13,7 @@ public class MapPage implements PageWithHotelParameters {
     public static final By FIRST_HOTEL_1 = By.cssSelector(".map-card__content-container");
     public static final By FIRST_HOTEL_2 = By.xpath("//span[@data-testid='header-title']");
 
-    //1.7 сохранить(в переменные) название отеля, количество звезд, среднюю оценку,
-    // количество отзывов, стоимость
+    //1.7 сохранить(в переменные) название отеля, количество звезд, среднюю оценку, количество отзывов, стоимость
     public static final By NAME_HOTEL_1 = By.cssSelector("div.map-card__title");
     public static final By NAME_HOTEL_2 = By.xpath("//div[@data-testid='header-container']");
     public static final By FIELD_WITH_STARS = By.cssSelector("span.bui-rating.bui-rating--smaller");

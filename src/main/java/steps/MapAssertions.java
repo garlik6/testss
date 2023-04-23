@@ -9,8 +9,8 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class HotelAssertions {
-    public static void assertHotelEquals(Map<String, String> map1, Map<String, String> map2) {
+public class MapAssertions {
+    public static void assertMapEquals(Map<String, String> map1, Map<String, String> map2) {
         List<Executable> assertsList = new ArrayList<>();
         assertsList.add(() -> assertEquals(map1.size(), map2.size()));
         for (String key : map1.keySet()) {

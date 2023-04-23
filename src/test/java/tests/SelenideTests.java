@@ -3,14 +3,17 @@ package tests;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import pages.*;
-import steps.AttractionAssertions;
-import steps.HotelAssertions;
+import steps.LocalDataStep;
+import steps.MapAssertions;
+import yml.InputData;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
-public class SelenideTests {
+import static random.RandomNumber.getRandomIntegerBetweenRange;
+
+public class SelenideTests extends BaseTest{
     HomePage homePage = new HomePage();
     SearchCity searchCity = new SearchCity();
     MapPage mapPage = new MapPage();
@@ -18,17 +21,19 @@ public class SelenideTests {
     AttractionsPage rentCarPage = new AttractionsPage();
     SearchAttractions searchAttractions = new SearchAttractions();
     FirstAttractionPage firstAttractionPage = new FirstAttractionPage();
+    LocalDataStep localDataStep = new LocalDataStep();
 
-    LocalDate date = LocalDate.now();
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    String startData = formatter.format(date);
-    String endData = formatter.format(date.plusDays(2));
-    private String city = "Лондон";
 
+    String startData = localDataStep.getStartData();
+    String endData = localDataStep.getEndData();
+    InputData inputData;
+    int randomNum = getRandomIntegerBetweenRange(0,10);
 
     @Test
     @DisplayName("Тест-кейс 1")
-    public void testScenario_1() throws InterruptedException {
+    public void testScenario_1() throws InterruptedException, IOException {
+
+        inputData = mapper.readValue(new File("src/test/java/yaml/inputData.yml"), InputData.class);
 
         //1.1 зайти на сайт https://www.booking.com/
         //1.2 ввести в поиске любой город(заграничный)
@@ -44,26 +49,25 @@ public class SelenideTests {
 
         homePage.openHomePage()
                 .acceptCookie()
-                .searchCityAndData(city, startData, endData);
+                .searchCityAndData(inputData.getCity().get(randomNum), startData, endData);
 
-        searchCity.checkCityHeader(city)
-                .clickMapButton();
+        searchCity.checkCityHeader(inputData.getCity().get(randomNum))
+                  .clickMapButton();
 
         Map<String, String> hotelParamsFromMapPage = mapPage.getParameterMap();
-//        hotelParamsFromMapPage.put("name", "Test");
-//        hotelParamsFromMapPage.put("cost","Test");
 
         mapPage.findFirstHotel();
         mapPage.clickMovingMarker();
 
         Map<String, String> hotelParamsFromHotelPage = hotelPage.getParameterMap();
-
-        HotelAssertions.assertHotelEquals(hotelParamsFromMapPage, hotelParamsFromHotelPage);
+        MapAssertions.assertMapEquals(hotelParamsFromMapPage, hotelParamsFromHotelPage);
     }
 
     @Test
     @DisplayName("Тест-кейс 2")
-    public void testScenario_2() throws InterruptedException {
+    public void testScenario_2() throws InterruptedException, IOException {
+
+        inputData = mapper.readValue(new File("src/test/java/yaml/inputData.yml"), InputData.class);
 
         //2.1 зайти на сайт https://www.booking.com/
         //2.2 нажать на кнопку «Варианты досуга»
@@ -79,7 +83,7 @@ public class SelenideTests {
                 .acceptCookie()
                 .clickAttractionsButton();
 
-        rentCarPage.searchCityAndData(city, startData, endData);
+        rentCarPage.searchCityAndData(inputData.getCity().get(randomNum), startData, endData);
         searchAttractions.clickLowPrice();
 
         Map<String, String> attractionParamsFromSearchAttractions = searchAttractions.getAttractionParams();
@@ -87,7 +91,6 @@ public class SelenideTests {
         searchAttractions.clickFirstAttraction();
 
         Map<String, String> attractionParamsFromFirstAttractionPage = firstAttractionPage.getAttractionParams();
-
-        AttractionAssertions.assertAttractionEquals(attractionParamsFromSearchAttractions, attractionParamsFromFirstAttractionPage);
+        MapAssertions.assertMapEquals(attractionParamsFromSearchAttractions, attractionParamsFromFirstAttractionPage);
     }
 }
