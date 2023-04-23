@@ -59,7 +59,6 @@ public class SelenideTests {
         Map<String, String> hotelParamsFromHotelPage = hotelPage.getParameterMap();
 
         HotelAssertions.assertHotelEquals(hotelParamsFromMapPage, hotelParamsFromHotelPage);
-
     }
 
     @Test
