@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -11,6 +12,8 @@ public class AttractionsPage {
     public static final String DATA = "span[data-date='%s']";
     public static final By SUBMIT_BUTTON = By.cssSelector("button[type='submit']");
 
+    @Step("Ввести в поиске любой город(заграничный), выбрать случайные даты и нажать на кнопку «Проверить цены»" +
+            "с параметрами: city={0}, startData={0}, endData={0}")
     public AttractionsPage searchCityAndData(String city, String startData, String endData) {
         $(SEARCH_FIELD).sendKeys(city);
         $(FIRST_IN_DROPDOWN).click();

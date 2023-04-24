@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import steps.PageWithHotelParameters;
 
@@ -24,6 +25,7 @@ public class MapPage implements PageWithHotelParameters {
     public static final By COST = By.cssSelector("span.prco-valign-middle-helper");
     public static final By MOVING_MARKER = By.cssSelector(".atlas-marker.hotel.bounce");
 
+    @Step("Навести курсор на первый отель(карточка слева)")
     public MapPage findFirstHotel() throws InterruptedException {
         Thread.sleep(5000);
         if ($(FIRST_HOTEL_1).exists()) {
@@ -34,6 +36,7 @@ public class MapPage implements PageWithHotelParameters {
         return this;
     }
 
+    @Step("Сохранить (в переменную) название отеля")
     public String getNameOfHotel() throws InterruptedException {
         Thread.sleep(10000);
         if ($(NAME_HOTEL_1).exists()) {
@@ -43,6 +46,7 @@ public class MapPage implements PageWithHotelParameters {
         }
     }
 
+    @Step("Сохранить(в переменную) количество звезд")
     public String getNumberOfStars() throws InterruptedException {
         Thread.sleep(5000);
         if ($(FIELD_WITH_STARS).exists()) {
@@ -56,6 +60,7 @@ public class MapPage implements PageWithHotelParameters {
         }
     }
 
+    @Step("Сохранить(в переменную) среднюю оценку")
     public String getAverageRating() throws InterruptedException {
         Thread.sleep(5000);
         if ($(AVERAGE_RATING_1).exists())
@@ -65,14 +70,17 @@ public class MapPage implements PageWithHotelParameters {
         }
     }
 
+    @Step("Сохранить(в переменную) количество отзывов")
     public String getNumberOfReviews() {
         return $(NUMBER_OF_REVIEWS).innerText().trim();
     }
 
+    @Step("Сохранить(в переменную) стоимость")
     public String getCost() {
         return $(COST).innerText().trim();
     }
 
+    @Step("Нажать на прыгающий маркер на карте")
     public MapPage clickMovingMarker() {
         $(MOVING_MARKER).click();
         Selenide.switchTo().window(1);

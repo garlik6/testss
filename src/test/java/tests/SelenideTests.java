@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import pages.*;
@@ -13,7 +14,12 @@ import java.util.Map;
 
 import static random.RandomNumber.getRandomIntegerBetweenRange;
 
-public class SelenideTests extends BaseTest{
+@Epic("Web tests")
+@Feature("Booking website")
+@DisplayName("Проверка параметров")
+@Link(name = "Ссылка сайта", url = "https://www.booking.com/")
+@Owner("Дребезова Наталья")
+public class SelenideTests extends BaseTest {
     HomePage homePage = new HomePage();
     SearchCity searchCity = new SearchCity();
     MapPage mapPage = new MapPage();
@@ -27,10 +33,14 @@ public class SelenideTests extends BaseTest{
     String startData = localDataStep.getStartData();
     String endData = localDataStep.getEndData();
     InputData inputData;
-    int randomNum = getRandomIntegerBetweenRange(0,10);
+    int randomNum = getRandomIntegerBetweenRange(0, 10);
 
     @Test
-    @DisplayName("Тест-кейс 1")
+    @DisplayName("Проверка параметров достопримечательности ")
+    @Description("Проверяем совпадение параметров " +
+            "(название, количество звезд, среднюю оценку, количество отзывов и стоимость) " +
+            "отеля на странице с картой и на странице отеля")
+    @Severity(SeverityLevel.BLOCKER)
     public void testScenario_1() throws InterruptedException, IOException {
 
         inputData = mapper.readValue(new File("src/test/java/yaml/inputData.yml"), InputData.class);
@@ -52,7 +62,7 @@ public class SelenideTests extends BaseTest{
                 .searchCityAndData(inputData.getCity().get(randomNum), startData, endData);
 
         searchCity.checkCityHeader(inputData.getCity().get(randomNum))
-                  .clickMapButton();
+                .clickMapButton();
 
         Map<String, String> hotelParamsFromMapPage = mapPage.getParameterMap();
 
@@ -64,7 +74,11 @@ public class SelenideTests extends BaseTest{
     }
 
     @Test
-    @DisplayName("Тест-кейс 2")
+    @DisplayName("Проверка параметров достопримечательности ")
+    @Description("Проверяем совпадение параметров (название и цену) " +
+            "достопримечательности на странице всех достопримечательностей города " +
+            "и на странице выбранной достопримечательности ")
+    @Severity(SeverityLevel.BLOCKER)
     public void testScenario_2() throws InterruptedException, IOException {
 
         inputData = mapper.readValue(new File("src/test/java/yaml/inputData.yml"), InputData.class);

@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import steps.PageWithHotelParameters;
 
@@ -15,6 +16,7 @@ public class HotelPage implements PageWithHotelParameters {
     public static final By NUMBER_OF_REVIEWS = By.cssSelector("div.d8eab2cf7f.c90c0a70d3.db63693c62");
     public static final By COST = By.cssSelector(".prco-valign-middle-helper");
 
+    @Step("На открывшейся странице отеля проверить количество звезд")
     public String getNumberOfStars() {
         Long count;
         if ($(STAR).exists()) {
@@ -26,18 +28,22 @@ public class HotelPage implements PageWithHotelParameters {
         return count.toString();
     }
 
+    @Step("На открывшейся странице отеля проверить название отеля")
     public String getNameOfHotel() {
         return $(HOTEL_NAME).innerText();
     }
 
+    @Step("На открывшейся странице отеля проверить среднюю оценку")
     public String getAverageRating() {
         return $(AVERAGE_RATING).innerText();
     }
 
+    @Step("На открывшейся странице отеля проверить количество отзывов")
     public String getNumberOfReviews() {
         return $(NUMBER_OF_REVIEWS).innerText().trim();
     }
 
+    @Step("На открывшейся странице отеля проверить стоимость")
     public String getCost() {
         return $(COST).innerText().trim();
     }

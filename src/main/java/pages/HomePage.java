@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import config.ProjectConfig;
+import io.qameta.allure.Step;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.By;
 
@@ -14,21 +15,28 @@ public class HomePage {
     public static final By SEARCH_FIELD = By.xpath("//input[@id=':Ra9:']");
     public static final By SUBMIT_BUTTON = By.xpath("//button[@type='submit']");
     public static final By FIRST_IN_DROPDOWN = By.cssSelector("div.a40619bfbe");
-    public static final By DATA_FIELD = By.cssSelector("div.ed2ff9f661");
+    public static final By DATA_FIELD = By.xpath("//div[@class='ed2ff9f661' or @class='d606c76c5a']");
 
     public static final String DATA = "span[data-date='%s']";
     public static final By ATTRACTIONS_BUTTON = By.id("attractions");
 
+    //div[@class='e5aa33035e']//button
+
+    @Step("Открыть страницу сайта https://www.booking.com/")
     public HomePage openHomePage() {
         Selenide.open(cfg.baseUrl());
         return this;
     }
 
+    @Step("Нажать на кнопку «Принять» (файлы Cookie) ")
     public HomePage acceptCookie() {
         $(ACCEPT_COOKIE_BUTTON).click();
         return this;
     }
 
+    @Step("Ввести в поиске любой город(заграничный) с параметром city={0}, " +
+            "выбрать случайные даты с параметрами startData={0} и endData={0} " +
+            " и нажать на кнопку «Найти»")
     public HomePage searchCityAndData(String city, String startData, String endData) {
         $(SEARCH_FIELD).sendKeys(city);
         $(FIRST_IN_DROPDOWN).shouldHave(Condition.text(city));
@@ -39,6 +47,7 @@ public class HomePage {
         return this;
     }
 
+    @Step("Нажать на кнопку «Варианты досуга»")
     public HomePage clickAttractionsButton() {
         $(ATTRACTIONS_BUTTON).click();
         return this;
