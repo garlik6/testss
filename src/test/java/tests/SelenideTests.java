@@ -1,8 +1,8 @@
 package tests;
 
 import io.qameta.allure.*;
-import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import pages.*;
 import steps.LocalDataStep;
 import steps.MapAssertions;
@@ -19,12 +19,12 @@ import static random.RandomNumber.getRandomIntegerBetweenRange;
 @DisplayName("Проверка параметров")
 @Link(name = "Ссылка сайта", url = "https://www.booking.com/")
 @Owner("Дребезова Наталья")
-public class SelenideTests extends BaseTest {
+public class SelenideTests extends BaseTest{
     HomePage homePage = new HomePage();
     SearchCity searchCity = new SearchCity();
     MapPage mapPage = new MapPage();
     HotelPage hotelPage = new HotelPage();
-    AttractionsPage rentCarPage = new AttractionsPage();
+    AttractionsPage attractionsPage = new AttractionsPage();
     SearchAttractions searchAttractions = new SearchAttractions();
     FirstAttractionPage firstAttractionPage = new FirstAttractionPage();
     LocalDataStep localDataStep = new LocalDataStep();
@@ -97,7 +97,7 @@ public class SelenideTests extends BaseTest {
                 .acceptCookie()
                 .clickAttractionsButton();
 
-        rentCarPage.searchCityAndData(inputData.getCity().get(randomNum), startData, endData);
+        attractionsPage.searchCityAndData(inputData.getCity().get(randomNum), startData, endData);
         searchAttractions.clickLowPrice();
 
         Map<String, String> attractionParamsFromSearchAttractions = searchAttractions.getAttractionParams();

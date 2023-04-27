@@ -4,129 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Move random data in RandomForeingCity.java class to a separate yml file&#10;Initialize Local Data type variables &lt;startData, endData&gt; in a separate class &lt;LocalDataStep&gt;&#10;Add 3 dependencies &lt;jackson-dataformat-yaml, jackson-databind, lombok&gt;&#10;Refactor code">
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/bin/allure" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/bin/allure.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/config/allure-cucumber.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/config/allure-junit.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/config/allure.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/allure-commandline-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/allure-generator-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/allure-model-2.20.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/allure-plugin-api-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/allure1-model-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/annotations-15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-beanutils-1.9.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-codec-1.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-collections-3.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-collections4-4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-io-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-lang3-3.12.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/commons-text-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/config/jetty-logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/config/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-ext-tables-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-ast-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-builder-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-collection-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-data-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-dependency-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-format-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-html-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-misc-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-options-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-sequence-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/flexmark-util-visitor-0.62.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/freemarker-2.3.32.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/httpclient-4.5.14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/httpcore-4.4.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jackson-annotations-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jackson-core-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jackson-databind-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jackson-dataformat-xml-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jackson-dataformat-yaml-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jackson-module-jaxb-annotations-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jakarta.activation-api-1.2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jakarta.xml.bind-api-2.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/javax.servlet-api-3.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jaxb-api-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jaxb-utils-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jcommander-1.82.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jetty-http-9.4.49.v20220914.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jetty-io-9.4.49.v20220914.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jetty-server-9.4.49.v20220914.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/jetty-util-9.4.49.v20220914.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/logback-classic-1.3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/logback-core-1.3.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/opencsv-4.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/properties-2.0.RC5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/slf4j-api-2.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/snakeyaml-1.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/stax2-api-4.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/tika-core-2.6.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/lib/woodstox-core-6.4.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/behaviors-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/behaviors-plugin/behaviors-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/behaviors-plugin/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/custom-logo-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/custom-logo-plugin/custom-logo-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/custom-logo-plugin/static/custom-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/custom-logo-plugin/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/jira-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/allure-jira-commons-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/converter-jackson-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/jackson-annotations-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/jackson-core-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/jackson-databind-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/okhttp-3.12.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/okio-1.15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/jira-plugin/lib/retrofit-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/junit-xml-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/junit-xml-plugin/junit-xml-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/packages-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/packages-plugin/packages-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/packages-plugin/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/screen-diff-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/screen-diff-plugin/screen-diff-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/screen-diff-plugin/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/screen-diff-plugin/static/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/trx-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/trx-plugin/trx-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xctest-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xctest-plugin/xctest-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/allure-jira-commons-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/converter-jackson-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/jackson-annotations-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/jackson-core-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/jackson-databind-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/okhttp-3.12.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/okio-1.15.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/lib/retrofit-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xray-plugin/xray-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xunit-xml-plugin/allure-plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.allure/allure-2.21.0/plugins/xunit-xml-plugin/xunit-xml-plugin-2.21.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/allure.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestProba.java" afterDir="false" />
+    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Intermediate allure commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/AttractionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AttractionsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FirstAttractionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FirstAttractionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HotelPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MapPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchAttractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchAttractions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchCity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchCity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/MapAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/MapAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/yaml/inputData.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/yaml/inputData.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestProba.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +76,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.TestProba">
+  <component name="RunManager" selected="JUnit.SelenideTests.testScenario_2">
     <configuration name="SelenideTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework23" />
       <extension name="coverage">
@@ -202,22 +88,6 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.SelenideTests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SelenideTests.testScenario_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework23" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SelenideTests" />
-      <option name="METHOD_NAME" value="testScenario_1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenario_2.testScenario_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestProba.testScenario_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework23" />
       <extension name="coverage">
         <pattern>
@@ -262,8 +132,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TestScenario_2" />
-      <option name="METHOD_NAME" value="testScenario_2" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestProba" />
+      <option name="METHOD_NAME" value="testScenario_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestProba.testScenario_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework23" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TestProba" />
+      <option name="METHOD_NAME" value="testScenario_3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -271,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestProba" />
         <item itemvalue="JUnit.SelenideTests.testScenario_2" />
-        <item itemvalue="JUnit.SelenideTests.testScenario_1" />
         <item itemvalue="JUnit.SelenideTests" />
-        <item itemvalue="JUnit.TestScenario_2.testScenario_2" />
+        <item itemvalue="JUnit.TestProba.testScenario_3" />
+        <item itemvalue="JUnit.TestProba.testScenario_1" />
+        <item itemvalue="JUnit.TestProba" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +206,10 @@
       <workItem from="1682540548947" duration="1356000" />
       <workItem from="1682598917740" duration="11323000" />
       <workItem from="1682613243271" duration="8161000" />
-      <workItem from="1682622039786" duration="844000" />
+      <workItem from="1682622039786" duration="4394000" />
+      <workItem from="1682637281260" duration="665000" />
+      <workItem from="1682639833956" duration="1404000" />
+      <workItem from="1682645362702" duration="5773000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1680601566571</created>
@@ -420,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682377799978</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Intermediate allure commit">
+      <created>1682623210119</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682623210119</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,6 +336,7 @@
     <MESSAGE value="Move packages &lt;config, pages, random&gt; from test to main.&#10;Add steps package in main.&#10;Add 2 interfaces &lt;in steps package&gt; that put test data in HashMap.&#10;Add 2 class &lt;in steps package&gt; for assertions." />
     <MESSAGE value="Refactor code." />
     <MESSAGE value="Move random data in RandomForeingCity.java class to a separate yml file&#10;Initialize Local Data type variables &lt;startData, endData&gt; in a separate class &lt;LocalDataStep&gt;&#10;Add 3 dependencies &lt;jackson-dataformat-yaml, jackson-databind, lombok&gt;&#10;Refactor code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move random data in RandomForeingCity.java class to a separate yml file&#10;Initialize Local Data type variables &lt;startData, endData&gt; in a separate class &lt;LocalDataStep&gt;&#10;Add 3 dependencies &lt;jackson-dataformat-yaml, jackson-databind, lombok&gt;&#10;Refactor code" />
+    <MESSAGE value="Intermediate allure commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intermediate allure commit" />
   </component>
 </project>

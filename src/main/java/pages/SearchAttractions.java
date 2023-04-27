@@ -9,7 +9,6 @@ import steps.PageWithAttractionParameters;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SearchAttractions implements PageWithAttractionParameters {
-
     public static final By LOW_PRICE_BUTTON = By.xpath("//label[text()='Самая низкая цена']");
     public static final By NAME_FIRST_ATTRACTION = By.xpath("//h4");
     public static final By PRICE_FIRST_ATTRACTION = By.cssSelector("div.ac78a73c96");

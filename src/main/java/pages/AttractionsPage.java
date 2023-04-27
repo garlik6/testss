@@ -11,6 +11,8 @@ public class AttractionsPage {
     public static final By DATA_FIELD = By.cssSelector("div.css-ck8kih");
     public static final String DATA = "span[data-date='%s']";
     public static final By SUBMIT_BUTTON = By.cssSelector("button[type='submit']");
+    
+    public static final By POP_UP_WINDOW = By.xpath("//div[@class='e5aa33035e']//button");
 
     @Step("Ввести в поиске любой город(заграничный), выбрать случайные даты и нажать на кнопку «Проверить цены»" +
             "с параметрами: city={0}, startData={0}, endData={0}")
@@ -21,6 +23,11 @@ public class AttractionsPage {
         $(String.format(DATA, startData)).click();
         $(String.format(DATA, endData)).click();
         $(SUBMIT_BUTTON).click();
+        return this;
+    }
+
+    public AttractionsPage closePopUpWindow(){
+        $(POP_UP_WINDOW).click();
         return this;
     }
 }
