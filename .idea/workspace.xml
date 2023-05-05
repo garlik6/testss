@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="Intermediate allure commit">
+    <list default="true" id="c76293fa-c3b7-4c73-8ba9-b712d34c4c15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AttractionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AttractionsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SearchAttractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SearchAttractions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/steps/MapAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/MapAssertions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelenideTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestProba.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +203,13 @@
       <workItem from="1682622039786" duration="4394000" />
       <workItem from="1682637281260" duration="665000" />
       <workItem from="1682639833956" duration="1404000" />
-      <workItem from="1682645362702" duration="5773000" />
+      <workItem from="1682645362702" duration="6772000" />
+      <workItem from="1683114301883" duration="189000" />
+      <workItem from="1683115338682" duration="2817000" />
+      <workItem from="1683294219147" duration="29000" />
+      <workItem from="1683313150437" duration="6397000" />
+      <workItem from="1683377074156" duration="144000" />
+      <workItem from="1683626665037" duration="1198000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1680601566571</created>
@@ -316,11 +316,29 @@
       <option name="project" value="LOCAL" />
       <updated>1682623210119</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add allure dependencies &#10;Delete dependencies for junit4&#10;Add @Test and @BeforeEach from junit5">
+      <created>1682651978971</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682651978971</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -337,6 +355,7 @@
     <MESSAGE value="Refactor code." />
     <MESSAGE value="Move random data in RandomForeingCity.java class to a separate yml file&#10;Initialize Local Data type variables &lt;startData, endData&gt; in a separate class &lt;LocalDataStep&gt;&#10;Add 3 dependencies &lt;jackson-dataformat-yaml, jackson-databind, lombok&gt;&#10;Refactor code" />
     <MESSAGE value="Intermediate allure commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intermediate allure commit" />
+    <MESSAGE value="Add allure dependencies &#10;Delete dependencies for junit4&#10;Add @Test and @BeforeEach from junit5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add allure dependencies &#10;Delete dependencies for junit4&#10;Add @Test and @BeforeEach from junit5" />
   </component>
 </project>
