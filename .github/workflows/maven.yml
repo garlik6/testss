@@ -17,9 +17,12 @@ jobs:
           with:
             java-version: '19'
 
-        - name: Install Chrome and ChromeDriver
+        - name: Update system
           run: |
             sudo apt-get update
+
+        - name: Install Chrome
+          run: |    
             apt-get -y install google-chrome-stable=113.0.5672.92-1
 
         - name: Build and test with Maven
