@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.9.19</aspectj.version>
         <allure.version>2.21.0</allure.version>
-    </properties>
+    </properties>plugin
 
     <dependencies>
 
