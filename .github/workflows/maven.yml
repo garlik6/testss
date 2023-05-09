@@ -21,6 +21,9 @@ jobs:
           run: |
             sudo apt-get update
             sudo apt-get install -y google-chrome-stable
+            wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_113.0.5672.93_amd64.deb
+            apt install -y /tmp/chrome.deb
+            rm /tmp/chrome.deb
 
         - name: Build and test with Maven
           run: mvn clean test
