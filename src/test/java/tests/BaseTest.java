@@ -1,8 +1,10 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -13,8 +15,11 @@ public class BaseTest {
     File file;
     @BeforeEach
     public void setup(){
+        WebDriverManager.chromedriver().setup();
+        Configuration.browser = "chrome";
         mapper = new ObjectMapper(new YAMLFactory());
         file = new File("src/test/java/yaml/inputData.yml");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\"");
     }
 }
