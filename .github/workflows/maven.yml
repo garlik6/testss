@@ -17,15 +17,14 @@ jobs:
           with:
             java-version: '19'
 
-        - name: Update system
-          run: |
-            sudo apt-get update
-
-        - name: Install Chrome
-          run: |
-            wget --no-verbose -O /tmp/chrome.deb http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_113.0.5672.92-1_amd64.deb
-            sudo apt install -y /tmp/chrome.deb
-            rm /tmp/chrome.deb
+        - name: Download selenoid
+          run: curl -s https://aerokube.com/cm/bash  | bash
+        - name: Extending the rights to launch the selenoid
+          run: chmod +x ./cm
+        - name: Launching a selenoid
+          run: ./cm selenoid start --vnc
+        - name: Launching a selenoid-ui
+          run: ./cm selenoid-ui start
 
         - name: Build and test with Maven
           run: mvn clean test
