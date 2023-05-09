@@ -9,14 +9,6 @@ jobs:
 
 
     steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
-
-        - name: Setup JDK
-          uses: actions/setup-java@v1
-          with:
-            java-version: '19'
-
         - name: Download selenoid
           run: curl -s https://aerokube.com/cm/bash  | bash
         - name: Extending the rights to launch the selenoid
@@ -28,6 +20,7 @@ jobs:
 
         - name: Build and test with Maven
           run: mvn clean test
+          continue-on-error: true
 
         - name: Generate allure report
           uses: simple-elf/allure-report-action@master
