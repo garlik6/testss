@@ -24,7 +24,7 @@ jobs:
         - name: Install Chrome
           run: |
             wget --no-verbose -O /tmp/chrome.deb http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_113.0.5672.92-1_amd64.deb
-            apt install -y /tmp/chrome.deb
+            sudo apt install -y /tmp/chrome.deb
             rm /tmp/chrome.deb
 
         - name: Build and test with Maven
