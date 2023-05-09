@@ -20,7 +20,6 @@ jobs:
 
         - name: Build and test with Maven
           run: mvn clean test
-          continue-on-error: true
 
         - name: Generate allure report
           uses: simple-elf/allure-report-action@master

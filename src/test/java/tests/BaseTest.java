@@ -20,6 +20,7 @@ public class BaseTest {
         mapper = new ObjectMapper(new YAMLFactory());
         file = new File("src/test/java/yaml/inputData.yml");
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        Configuration.remote = "http://localhost:4444/wd/hub";
         System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\"");
     }
 }
