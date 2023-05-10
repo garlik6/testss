@@ -7,8 +7,9 @@ jobs:
   run_Tests:
     runs-on: ubuntu-latest
 
-
     steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
         - name: Download selenoid
           run: curl -s https://aerokube.com/cm/bash  | bash
         - name: Extending the rights to launch the selenoid
