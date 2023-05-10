@@ -12,16 +12,15 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '19'
+
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Download selenoid
-        run: curl -s https://aerokube.com/cm/bash  | bash
-      - name: Extending the rights to launch the selenoid
-        run: chmod +x ./cm
-      - name: Launching a selenoid
-        run: ./cm selenoid start --vnc
-      - name: Launching a selenoid-ui
-        run: ./cm selenoid-ui start
+        run: |
+          curl -s https://aerokube.com/cm/bash  | bash
+          chmod +x ./cm
+          ./cm selenoid start --vnc
 
       - name: Build and test with Maven
         run: mvn clean test
